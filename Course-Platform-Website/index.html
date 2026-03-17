@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>LearnHub Course Platform</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav>
+
+<h2>LearnHub</h2>
+
+<div>
+
+<a href="#" onclick="showPage('home')">Home</a>
+<a href="#" onclick="showPage('courses')">Courses</a>
+<a href="#" onclick="showPage('signup')">Signup</a>
+<a href="#" onclick="showPage('login')">Login</a>
+<a href="#" onclick="showPage('dashboard')">Dashboard</a>
+<a href="#" onclick="showPage('contact')">Contact</a>
+
+</div>
+
+</nav>
+
+<!-- HOME -->
+
+<section id="home" class="active">
+
+<div class="hero">
+
+<h1>Learn New Skills Online</h1>
+
+<p>Join thousands of students learning programming and AI.</p>
+
+<button class="btn" onclick="showPage('courses')">
+Explore Courses
+</button>
+
+</div>
+
+</section>
+
+<!-- COURSES -->
+
+<section id="courses">
+
+<h2>Courses</h2>
+
+<input type="text" id="search" placeholder="Search course..." onkeyup="searchCourse()">
+
+<div class="courses">
+
+<div class="card">
+
+<h3>Web Development</h3>
+<p>Instructor: John</p>
+<p>₹999</p>
+
+<button class="btn" onclick="showPage('details')">
+View Details
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>Python Programming</h3>
+<p>Instructor: Sarah</p>
+<p>₹799</p>
+
+<button class="btn" onclick="showPage('details')">
+View Details
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>Artificial Intelligence</h3>
+<p>Instructor: David</p>
+<p>₹1299</p>
+
+<button class="btn" onclick="showPage('details')">
+View Details
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- COURSE DETAILS -->
+
+<section id="details">
+
+<h2>Web Development Bootcamp</h2>
+
+<p>Instructor: John Smith</p>
+<p>Duration: 8 Weeks</p>
+<p>Price: ₹999</p>
+
+<h3>Modules</h3>
+
+<ul>
+
+<li>HTML Basics</li>
+<li>CSS Styling</li>
+<li>JavaScript</li>
+<li>Final Project</li>
+
+</ul>
+
+<button class="btn">Enroll Now</button>
+
+</section>
+
+<!-- SIGNUP -->
+
+<section id="signup">
+
+<h2>Sign Up</h2>
+
+<form onsubmit="signup(event)">
+
+<input type="text" id="name" placeholder="Full Name" required>
+
+<input type="email" id="email" placeholder="Email" required>
+
+<input type="password" id="password" placeholder="Password" required>
+
+<button class="btn">Create Account</button>
+
+</form>
+
+</section>
+
+<!-- LOGIN -->
+
+<section id="login">
+
+<h2>Login</h2>
+
+<form onsubmit="login(event)">
+
+<input type="email" id="loginEmail" placeholder="Email" required>
+
+<input type="password" id="loginPassword" placeholder="Password" required>
+
+<button class="btn">Login</button>
+
+</form>
+
+</section>
+
+<!-- DASHBOARD -->
+
+<section id="dashboard">
+
+<h2>Dashboard</h2>
+
+<div class="card">
+
+<h3>Your Course</h3>
+
+<p>Web Development Bootcamp</p>
+
+<label>Progress</label>
+
+<progress value="40" max="100"></progress>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>Contact Us</h2>
+
+<form onsubmit="sendMessage(event)">
+
+<input type="text" placeholder="Name" required>
+
+<input type="email" placeholder="Email" required>
+
+<textarea placeholder="Message"></textarea>
+
+<button class="btn">Send Message</button>
+
+</form>
+
+<p id="msg"></p>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
